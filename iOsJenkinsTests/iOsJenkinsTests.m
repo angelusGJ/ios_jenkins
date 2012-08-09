@@ -29,4 +29,8 @@
     STAssertTrue(1 == 1, @"Unit test for testing integration iOs with Jenkins");
 }
 
+- (void) testFail{
+    STFail(@"fallo de test");
+}
+
 @end
