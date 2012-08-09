@@ -21,7 +21,6 @@
 		A71FA52915D3A6E100907F7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71FA50715D3A6E100907F7E /* Foundation.framework */; };
 		A71FA53115D3A6E100907F7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A71FA52F15D3A6E100907F7E /* InfoPlist.strings */; };
 		A71FA53415D3A6E100907F7E /* iOsJenkinsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A71FA53315D3A6E100907F7E /* iOsJenkinsTests.m */; };
-		A734888215D41EDE00B92428 /* DetailViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A734888115D41EDE00B92428 /* DetailViewControllerTest.m */; };
 		A734889A15D42FEF00B92428 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A734889815D42F0600B92428 /* libOCMock.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +56,6 @@
 		A71FA53015D3A6E100907F7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A71FA53215D3A6E100907F7E /* iOsJenkinsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOsJenkinsTests.h; sourceTree = "<group>"; };
 		A71FA53315D3A6E100907F7E /* iOsJenkinsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOsJenkinsTests.m; sourceTree = "<group>"; };
-		A734888015D41EDE00B92428 /* DetailViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerTest.h; sourceTree = "<group>"; };
-		A734888115D41EDE00B92428 /* DetailViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerTest.m; sourceTree = "<group>"; };
 		A734889815D42F0600B92428 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,8 +147,6 @@
 				A71FA53215D3A6E100907F7E /* iOsJenkinsTests.h */,
 				A71FA53315D3A6E100907F7E /* iOsJenkinsTests.m */,
 				A71FA52D15D3A6E100907F7E /* Supporting Files */,
-				A734888015D41EDE00B92428 /* DetailViewControllerTest.h */,
-				A734888115D41EDE00B92428 /* DetailViewControllerTest.m */,
 			);
 			path = iOsJenkinsTests;
 			sourceTree = "<group>";
@@ -284,7 +279,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71FA53415D3A6E100907F7E /* iOsJenkinsTests.m in Sources */,
-				A734888215D41EDE00B92428 /* DetailViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,12 +418,11 @@
 				INFOPLIST_FILE = "iOsJenkinsTests/iOsJenkinsTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../usr/lib\"",
 					"\"$(SRCROOT)/usr/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_AFTER_BUILD = YES;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_AFTER_BUILD = NO;
+				TEST_HOST = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
@@ -449,12 +442,11 @@
 				INFOPLIST_FILE = "iOsJenkinsTests/iOsJenkinsTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../usr/lib\"",
 					"\"$(SRCROOT)/usr/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_AFTER_BUILD = YES;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_AFTER_BUILD = NO;
+				TEST_HOST = "";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
