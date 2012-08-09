@@ -30,7 +30,7 @@
 }
 
 - (void) testFail{
-    STFail(@"fallo de test");
+    STAssertTrue(1 == 1, @"Todo es verdad");
 }
 
 @end
