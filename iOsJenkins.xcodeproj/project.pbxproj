@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A70841D015D92413008821B1 /* ILProfilerCompat.c in Sources */ = {isa = PBXBuildFile; fileRef = A70841CF15D92413008821B1 /* ILProfilerCompat.c */; };
+		A70841DB15D925F4008821B1 /* ILProfilerCompat.c in Sources */ = {isa = PBXBuildFile; fileRef = A70841CF15D92413008821B1 /* ILProfilerCompat.c */; };
 		A71FA50615D3A6E100907F7E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71FA50515D3A6E100907F7E /* UIKit.framework */; };
 		A71FA50815D3A6E100907F7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71FA50715D3A6E100907F7E /* Foundation.framework */; };
 		A71FA50A15D3A6E100907F7E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71FA50915D3A6E100907F7E /* CoreGraphics.framework */; };
@@ -25,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A71FA52A15D3A6E100907F7E /* PBXContainerItemProxy */ = {
+		A70841D915D92559008821B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A71FA4F815D3A6E100907F7E /* Project object */;
 			proxyType = 1;
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A70841CF15D92413008821B1 /* ILProfilerCompat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ILProfilerCompat.c; sourceTree = "<group>"; };
 		A71FA50115D3A6E100907F7E /* iOsJenkins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOsJenkins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71FA50515D3A6E100907F7E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A71FA50715D3A6E100907F7E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -147,6 +150,7 @@
 				A71FA53215D3A6E100907F7E /* iOsJenkinsTests.h */,
 				A71FA53315D3A6E100907F7E /* iOsJenkinsTests.m */,
 				A71FA52D15D3A6E100907F7E /* Supporting Files */,
+				A70841CF15D92413008821B1 /* ILProfilerCompat.c */,
 			);
 			path = iOsJenkinsTests;
 			sourceTree = "<group>";
@@ -192,7 +196,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A71FA52B15D3A6E100907F7E /* PBXTargetDependency */,
+				A70841DA15D92559008821B1 /* PBXTargetDependency */,
 			);
 			name = iOsJenkinsTests;
 			productName = iOsJenkinsTests;
@@ -271,6 +275,7 @@
 				A71FA51615D3A6E100907F7E /* AppDelegate.m in Sources */,
 				A71FA51C15D3A6E100907F7E /* MasterViewController.m in Sources */,
 				A71FA51F15D3A6E100907F7E /* DetailViewController.m in Sources */,
+				A70841DB15D925F4008821B1 /* ILProfilerCompat.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,16 +284,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A71FA53415D3A6E100907F7E /* iOsJenkinsTests.m in Sources */,
+				A70841D015D92413008821B1 /* ILProfilerCompat.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A71FA52B15D3A6E100907F7E /* PBXTargetDependency */ = {
+		A70841DA15D92559008821B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A71FA50015D3A6E100907F7E /* iOsJenkins */;
-			targetProxy = A71FA52A15D3A6E100907F7E /* PBXContainerItemProxy */;
+			targetProxy = A70841D915D92559008821B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -320,6 +326,83 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A70841D515D9243C008821B1 /* Coverage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"\"${SRCROOT}/usr/lib/libOCMock.a\"",
+					"-Objc",
+				);
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Coverage;
+		};
+		A70841D615D9243C008821B1 /* Coverage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOsJenkins/iOsJenkins-Prefix.pch";
+				INFOPLIST_FILE = "iOsJenkins/iOsJenkins-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Coverage;
+		};
+		A70841D715D9243C008821B1 /* Coverage */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOsJenkins.app/iOsJenkins";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					/Developer/Library/Frameworks,
+				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOsJenkins/iOsJenkins-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = "\"${SRCROOT}/usr/include/\"/**";
+				INFOPLIST_FILE = "iOsJenkinsTests/iOsJenkinsTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/usr/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				TEST_AFTER_BUILD = YES;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_RIG = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Coverage;
+		};
 		A71FA53515D3A6E100907F7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -349,6 +432,7 @@
 					"\"${SRCROOT}/usr/lib/libOCMock.a\"",
 					"-Objc",
 				);
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -407,13 +491,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iOsJenkins.app/iOsJenkins";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 					/Developer/Library/Frameworks,
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOsJenkins/iOsJenkins-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"${SRCROOT}/usr/include/\"/**";
 				INFOPLIST_FILE = "iOsJenkinsTests/iOsJenkinsTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -421,7 +509,8 @@
 					"\"$(SRCROOT)/usr/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_AFTER_BUILD = YES;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				TEST_AFTER_BUILD = NO;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				TEST_RIG = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -437,8 +526,11 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 					/Developer/Library/Frameworks,
 				);
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOsJenkins/iOsJenkins-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = "\"${SRCROOT}/usr/include/\"/**";
 				INFOPLIST_FILE = "iOsJenkinsTests/iOsJenkinsTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -446,7 +538,8 @@
 					"\"$(SRCROOT)/usr/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_AFTER_BUILD = YES;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				TEST_AFTER_BUILD = NO;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				TEST_RIG = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -460,6 +553,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A71FA53515D3A6E100907F7E /* Debug */,
+				A70841D515D9243C008821B1 /* Coverage */,
 				A71FA53615D3A6E100907F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -469,6 +563,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A71FA53815D3A6E100907F7E /* Debug */,
+				A70841D615D9243C008821B1 /* Coverage */,
 				A71FA53915D3A6E100907F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -478,6 +573,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A71FA53B15D3A6E100907F7E /* Debug */,
+				A70841D715D9243C008821B1 /* Coverage */,
 				A71FA53C15D3A6E100907F7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
