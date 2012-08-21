@@ -23,6 +23,7 @@
 		A71FA52915D3A6E100907F7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71FA50715D3A6E100907F7E /* Foundation.framework */; };
 		A71FA53115D3A6E100907F7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A71FA52F15D3A6E100907F7E /* InfoPlist.strings */; };
 		A71FA53415D3A6E100907F7E /* iOsJenkinsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A71FA53315D3A6E100907F7E /* iOsJenkinsTests.m */; };
+		A72D122D15D993CA00B1E868 /* DetailViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D122C15D993C900B1E868 /* DetailViewControllerTest.m */; };
 		A734889A15D42FEF00B92428 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A734889815D42F0600B92428 /* libOCMock.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		A71FA53015D3A6E100907F7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A71FA53215D3A6E100907F7E /* iOsJenkinsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOsJenkinsTests.h; sourceTree = "<group>"; };
 		A71FA53315D3A6E100907F7E /* iOsJenkinsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOsJenkinsTests.m; sourceTree = "<group>"; };
+		A72D122B15D993C900B1E868 /* DetailViewControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerTest.h; sourceTree = "<group>"; };
+		A72D122C15D993C900B1E868 /* DetailViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerTest.m; sourceTree = "<group>"; };
 		A734889815D42F0600B92428 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = usr/lib/libOCMock.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +150,8 @@
 		A71FA52C15D3A6E100907F7E /* iOsJenkinsTests */ = {
 			isa = PBXGroup;
 			children = (
+				A72D122B15D993C900B1E868 /* DetailViewControllerTest.h */,
+				A72D122C15D993C900B1E868 /* DetailViewControllerTest.m */,
 				A71FA53215D3A6E100907F7E /* iOsJenkinsTests.h */,
 				A71FA53315D3A6E100907F7E /* iOsJenkinsTests.m */,
 				A71FA52D15D3A6E100907F7E /* Supporting Files */,
@@ -285,6 +290,7 @@
 			files = (
 				A71FA53415D3A6E100907F7E /* iOsJenkinsTests.m in Sources */,
 				A70841D015D92413008821B1 /* ILProfilerCompat.c in Sources */,
+				A72D122D15D993CA00B1E868 /* DetailViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +339,6 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -345,9 +350,6 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
@@ -367,8 +369,10 @@
 				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOsJenkins/iOsJenkins-Prefix.pch";
+				GENERATE_PROFILING_CODE = YES;
 				INFOPLIST_FILE = "iOsJenkins/iOsJenkins-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Coverage;
@@ -388,6 +392,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOsJenkins/iOsJenkins-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PROFILING_CODE = YES;
 				HEADER_SEARCH_PATHS = "\"${SRCROOT}/usr/include/\"/**";
 				INFOPLIST_FILE = "iOsJenkinsTests/iOsJenkinsTests-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -395,7 +400,7 @@
 					"\"$(SRCROOT)/usr/lib\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = NO;
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				TEST_AFTER_BUILD = YES;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				TEST_RIG = "$(BUNDLE_LOADER)";
@@ -410,7 +415,6 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -422,9 +426,6 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_LDFLAGS = (
@@ -444,14 +445,10 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

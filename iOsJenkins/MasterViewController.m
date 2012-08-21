@@ -115,4 +115,8 @@
     }
 }
 
+- (void) analyzer {
+    int result = 10 /0;
+}
+
 @end
